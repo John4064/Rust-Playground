@@ -4,26 +4,28 @@
 
 //let mut to create a mutable variable
 
-fn example_type_cast(value: i32){
+
+
+fn example_type_cast(value: i32) {
     let mut my_base = value;
-    my_base+=5;
+    my_base += 5;
     let my_extra = 3.4;
-    let test = my_base as f64 +my_extra;
+    let test = my_base as f64 + my_extra;
     println!("{}", test);
 }
 
-fn example_array(){
-    let my_arr = [3,4,3,32];
+fn example_array() {
+    let my_arr = [3, 4, 3, 32];
     println!("{:?}", my_arr);
 }
 
-fn example_loops(){
+fn example_loops() {
     //..is exclusive 0-5 ..= is inclusive 0-5
     println!("Exclusive:");
     for x in 0..5 {
         println!("{}", x);
     }
-   println!("Inclusive:");
+    println!("Inclusive:");
     for x in 0..=5 {
         println!("{}", x);
     }
@@ -39,10 +41,18 @@ fn example_loops(){
     return;
 }
 
-fn example_conditional(){
-    
+fn example_conditional() {
+    let y = 5;
+    if y > 4 {
+        println!("HI");
+    }
 }
 fn main() {
-    example_loops();
-
+    if true {
+        example_conditional();
+    }else{
+        example_loops();
+        example_array();
+        example_type_cast(3);
+    }
 }
