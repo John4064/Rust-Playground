@@ -47,12 +47,38 @@ fn example_conditional() {
         println!("HI");
     }
 }
+/**
+Below will be some Leetcode problems!
+**/
+//https://leetcode.com/problems/concatenation-of-array/
+fn get_concatenation(nums: Vec<i32>) -> Vec<i32>{
+    let mut ans_arr = vec![];
+    let size = nums.len();
+    for x in 0..size*2 {
+        ans_arr.push(nums[x%size]);
+    }
+    return ans_arr;
+}
+//https://leetcode.com/problems/build-array-from-permutation/
+fn build_array(nums: Vec<i32>) -> Vec<i32> {
+    let mut ans_arr = vec![];
+    for x in 0..nums.len(){
+        ans_arr.push(nums[nums[x]as usize]);
+    }
+    return ans_arr;
+}
+
+
 fn main() {
     if true {
-        example_conditional();
+        println!("{:?}", build_array( vec![0,2,1,5,3,4]));
+        println!("{:?}", build_array( vec![5,0,1,2,3,4]));
     }else{
+        //Examples
+        example_conditional();
         example_loops();
         example_array();
         example_type_cast(3);
+        println!("{:?}", get_concatenation( vec![1,2,1]));
     }
 }
