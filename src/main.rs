@@ -67,12 +67,21 @@ fn build_array(nums: Vec<i32>) -> Vec<i32> {
     }
     return ans_arr;
 }
+//https://leetcode.com/problems/running-sum-of-1d-array/
+fn running_sum(nums: Vec<i32>) -> Vec<i32> {
+    let mut ans_arr = vec![];
+    let mut curr_sum=0;
+    for x in 0..nums.len(){
+        curr_sum+=nums[x];
+        ans_arr.push(curr_sum);
+    }
+    return ans_arr;
+}
 
 
 fn main() {
     if true {
-        println!("{:?}", build_array( vec![0,2,1,5,3,4]));
-        println!("{:?}", build_array( vec![5,0,1,2,3,4]));
+        println!("{:?}", running_sum( vec![0,1,2,3,4,5,6,7,8,9,-5]));
     }else{
         //Examples
         example_conditional();
@@ -80,5 +89,8 @@ fn main() {
         example_array();
         example_type_cast(3);
         println!("{:?}", get_concatenation( vec![1,2,1]));
+        println!("{:?}", build_array( vec![0,2,1,5,3,4]));
+        println!("{:?}", running_sum( vec![5,0,1,2,3,4]));
+
     }
 }
