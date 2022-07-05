@@ -1,4 +1,8 @@
+#![allow(non_snake_case)]
+#![allow(unused_variables)]
+#![allow(dead_code)]
 /**@Author John Parkhurst
+
  * @brief learning about Rust
  */
 
@@ -78,8 +82,7 @@ fn running_sum(nums: Vec<i32>) -> Vec<i32> {
     return ans_arr;
 }
 
-
-fn main() {
+fn run_code(){
     if true {
         println!("{:?}", running_sum( vec![0,1,2,3,4,5,6,7,8,9,-5]));
     }else{
@@ -93,4 +96,19 @@ fn main() {
         println!("{:?}", running_sum( vec![5,0,1,2,3,4]));
 
     }
+}
+
+
+fn divisor(num: i32)-> Vec<i32>{
+    let mut ans_arr = vec![];
+
+    for i in 1..num+1{
+        if num%i==0{
+            ans_arr.push(i);
+        }
+    }
+    return ans_arr;
+}
+fn main() {
+    println!("{:?}",divisor(4));
 }
