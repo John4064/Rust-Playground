@@ -8,12 +8,12 @@
 
 pub mod examples;//examples::run_code(); example code
 //let mut to create a mutable variable
-
+pub mod tempconvert;
 
 
 
 
 fn main() {
-
+    println!("{}",tempconvert::c_to_f(-50.0));
 
 }
