@@ -1,14 +1,9 @@
 # Rust-Playground
  Just a collection of programs while I learn Rust
 
-## Installation
+## Project Ideas
 
-Use [Git](https://git-scm.com/downloads) to clone the repo.
-
-```bash
-git clone https://github.com/John4064/Rust-Playground.git
-```
-
+Projects(https://github.com/whostolemyhat/learning-projects)
 ## Usage
 
 Nothing to use yet
