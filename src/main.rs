@@ -8,8 +8,9 @@
 
 pub mod examples;//examples::run_code(); example code
 
-
+pub mod checkergrid;
 
 
 fn main() {
+    checkergrid::generate()
 }
