@@ -14,6 +14,9 @@ pub fn generate(){
             let tempnum: u8 =  rng.gen_range(0, BOARDSIZE as u8);
             state[i][j] = tempnum;
             print!("{} ", state[i][j]);
+            if tempnum[i].contains(){
+
+            }
         }
         println!("");
     }
