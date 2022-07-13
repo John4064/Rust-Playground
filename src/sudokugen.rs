@@ -15,27 +15,20 @@ pub fn generate(){
     //4 by 4 matrix
     let mut rng = rand::thread_rng();
     let mut state = [[0u8; BOARDSIZE];9];
-    let mut tempString : String = "123456789".to_string();
-    let mut usedNums : String ="".to_string();
+    let mut temp_string: String = "123456789".to_string();
+    let mut used_nums: String ="".to_string();
     for i in 0..BOARDSIZE{
-        let mut boolexp = false;
-        for j in 0..BOARDSIZE {
-            if boolexp == false {
-                let mut tempnum: u8 =  rng.gen_range(1, 1+BOARDSIZE as u8);
-                 while !tempString.contains(&tempnum.to_string())  && usedNums.contains(&tempnum.to_string()) {
-                     tempnum = rng.gen_range(1, 1+BOARDSIZE as u8);
-                 }
-                tempString=tempString.replace(&tempnum.to_string(),"");
-                usedNums.push_str(tempnum.to_string().trim());
-                println!("{}",tempString);
-                //now we auto
-                state[i][j] = tempnum;
 
-                boolexp = true;
-            }else{
-                state[i][j] =0;
+        if true {
+            let mut temp_num: u8 = rng.gen_range(1, 1 + BOARDSIZE as u8);
+            while !temp_string.contains(&temp_num.to_string()) && used_nums.contains(&temp_num.to_string()) {
+                temp_num = rng.gen_range(1, 1 + BOARDSIZE as u8);
             }
-
+            temp_string = temp_string.replace(&temp_num.to_string(), "");
+            used_nums.push_str(temp_num.to_string().trim());
+            println!("{}", temp_string);
+            //now we auto
+            state[i][rng.gen_range(0, BOARDSIZE as usize)] = temp_num;
         }
     }
     printout(&state);
