@@ -14,5 +14,6 @@ pub mod readfiles; //Read/write files in rust
 
 
 fn main() {
-    sudokugen::generate()
+   //sudokugen::generate()
+    readfiles::printF();
 }
