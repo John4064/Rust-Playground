@@ -1,0 +1,7 @@
+character:
+  home: Refariel
+  name: john
+  attributes:
+    alive: yes
+    power: 50
+    age: 21

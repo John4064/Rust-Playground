@@ -1,7 +1,0 @@
-character:
-  base: Refariel
-  default_attributes:
-    alive: yes
-    power: 50
-    items: [1,2]
-  name: john
