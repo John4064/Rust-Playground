@@ -4,10 +4,14 @@ use std::fs;
 
 pub fn printF(){
     //Prints the file that is read
-    readF();
+    let results =readF();
+    println!("{}",results);
 }
-pub fn readF(){
-    let contents = fs::read_to_string("./data/data.json")
+pub fn readF() -> String {
+    /**
+    @return: File contents as a string
+    **/
+    let contents: String = fs::read_to_string("./data/data.yaml")
         .expect("Something went wrong reading the file");
-    println!("{}",contents);
+    return contents;
 }
