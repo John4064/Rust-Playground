@@ -1,6 +1,22 @@
-struct player {
+// Player:
+// home: Refariel
+// name: john
+// Attributes:
+// alive: yes
+// power: 50
+// age: 21
+
+
+
+struct Player {
     home: String,
     name: String,
     email: String,
-    sign_in_count: u64,
+    attr: Attributes
+}
+
+struct Attributes {
+    alive: bool,
+    power: i32,
+    age: i32
 }
