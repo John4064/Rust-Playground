@@ -20,7 +20,7 @@ pub fn readF() -> String {
     /**
     @return: File contents as a string
     **/
-    let contents: String = fs::read_to_string("./data/data.yaml")
+    let contents: String = fs::read_to_string("../../data/data.yaml")
         .expect("Something went wrong reading the file");
     return contents;
 }
